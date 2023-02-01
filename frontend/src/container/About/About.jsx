@@ -12,14 +12,16 @@ const abouts = [
 ];
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+
+  }, []);
+  
+
   return (
     <>
-      <h2 className="head-text">
-        A High, In-demand
-        <span>Skill</span>
-        <br />
-        must
-        <span>Produce Quality</span>
+      <h2 className="head-text">A High, In-demand <span>Skill</span> <br /> must <span>Produce Quality</span>
       </h2>
 
       <div className="app__profiles">
