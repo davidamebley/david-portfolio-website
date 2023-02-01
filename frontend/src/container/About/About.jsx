@@ -3,19 +3,22 @@ import { motion } from 'framer-motion';
 
 import './About.scss';
 import { images } from '../../constants'
+import { urlFor, client } from '../../client';
 
-const abouts = [
+/* const abouts = [
   {title: "Frontend Developer", description: "I design frontend apps for the web", imgUrl: images.about01},
   {title: "Backend Developer", description: "I create the backend of web applications", imgUrl: images.about02},
   {title: "Full Stack Developer", description: "I combine the beauty of the front end to the server side to create a fully functional full-stack web app.", imgUrl: images.about03},
   {title: "Mobile App Developer", description: "I design user-friendly mobile applications for Android and iOS", imgUrl: images.about04},
-];
+]; */
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
+    const query = '*[_type == "abouts"]';
 
+    client.fetch(query).then((data) => setAbouts(data))
   }, []);
   
 
