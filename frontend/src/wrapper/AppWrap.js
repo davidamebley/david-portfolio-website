@@ -14,13 +14,12 @@ const AppWrap = (Component, idName, classNames) => function HOC() {
                 <p className='p-text'>
                     &copy; {new Date().getFullYear()} David Amebley
                 </p>
-                <p className='p-text'>All Rights Reserved</p>
             </div>
 
         </div>
 
         <NavigationDots active={idName} />
-        
+
     </div>
   )
 }
