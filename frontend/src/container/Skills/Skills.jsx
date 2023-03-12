@@ -48,10 +48,12 @@ const Skills = () => {
         </motion.div>
 
         <motion.div className='app__skills-exp'>
-          {experience?.map((experience, index) => (
+          {experience
+            ?.sort((a, b) => b.year - a.year) // Sort experiences by year
+            .map((experience, index) => (
             <motion.div
               className='app__skills-exp-item'
-              key={experience.year}
+              key={experience.year+index}
             >
               <div className="app__skills-exp-year" key={index}>
                 <p className="bold-text">{experience.year}</p>
@@ -90,4 +92,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default AppWrap(Skills, 'skills');
