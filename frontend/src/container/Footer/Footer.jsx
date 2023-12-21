@@ -13,9 +13,9 @@ const Footer = () => {
   const { name, email, message } = formData;
 
   const handleChangeInput = (e) => {
-    const { input, value } = e.target;
+    const { name, value } = e.target;
 
-    setFormData({ ...formData, [input]: value });
+    setFormData({ ...formData, [name]: value });
   }
 
   const handleSubmit = () => {
@@ -54,14 +54,14 @@ const Footer = () => {
         !isFormSubmitted ?
           <div className="app__footer-form app__flex">
             <div className="app__flex">
-              <input className='p-text' type="text" name='name' placeholder='Your Full Name' value={name} onChange={handleChangeInput} />
+              <input className='p-text' type="text" name="name" placeholder="Your Full Name" value={name} onChange={handleChangeInput} />
             </div>
             <div className="app__flex">
-              <input className='p-text' type="email" name='email' placeholder='Your Email' value={email} onChange={handleChangeInput} />
+              <input className='p-text' type="email" name="email" placeholder="Your Email" value={email} onChange={handleChangeInput} />
             </div>
             <div>
               <textarea
-                name={message}
+                name="message"
                 id={message}
                 cols="30" rows="10"
                 className="p-text"
