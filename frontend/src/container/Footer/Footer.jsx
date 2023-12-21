@@ -62,7 +62,7 @@ const Footer = () => {
           </div>
           :
           <div>
-            <h3 className="head-text">Thank you. Your message was sent successfully.</h3>
+            <h3 className="head-text">Thank you. Your message has been sent.</h3>
           </div>
       }
       <div>
