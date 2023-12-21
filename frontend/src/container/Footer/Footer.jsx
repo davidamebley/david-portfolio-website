@@ -59,24 +59,26 @@ const Footer = () => {
             <div className="app__flex">
               <input className='p-text' type="email" name='email' placeholder='Your Email' value={email} onChange={handleChangeInput} />
             </div>
+            <div>
+              <textarea
+                name={message}
+                id={message}
+                cols="30" rows="10"
+                className="p-text"
+                placeholder='Enter Your Message'
+                value={message}
+                onChange={handleChangeInput}
+              />
+            </div>
+            <button type='button' className="p-text" onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
           </div>
           :
           <div>
             <h3 className="head-text">Thank you. Your message has been sent.</h3>
           </div>
       }
-      <div>
-        <textarea
-          name={message}
-          id={message}
-          cols="30" rows="10"
-          className="p-text"
-          placeholder='Enter Your Message'
-          value={message}
-          onChange={handleChangeInput}
-        />
-      </div>
-      <button type='button' className="p-text" onClick={handleSubmit}>{loading ? 'Sending' : 'Send Message'}</button>
+
+
     </>
   )
 }
