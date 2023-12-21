@@ -132,7 +132,7 @@
     color: var(--secondary-color);
   }
 
-  @media screen and(max-width:450px) {
+  @media screen and (max-width: 450px) {
     margin-right: 1rem;
   }
 }
@@ -148,7 +148,7 @@
   line-height: 1.5 !important;
   opacity: 1 !important;
 
-  @media screen and(min-width:2000px) {
+  @media screen and (min-width: 2000px) {
     font-size: 1.75rem !important;
     max-width: 500px !important;
     line-height: 2 !important;
