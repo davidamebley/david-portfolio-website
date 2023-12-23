@@ -1,4 +1,3 @@
 # David Amebley - Portfolio Website
-This is a work-in-progress repository for my portfolio website with Sanity as the backend.
+This is a full-stack portfolio website with Sanity as the backend and ReactJS as the front end.
 
-Updates will be applied frequently until satisfied with.
